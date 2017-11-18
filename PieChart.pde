@@ -3,8 +3,8 @@ public class PieChart extends Chart {
   PieChart (Data data, int chartX, int chartY, int chartWidth, int chartHeight) {
    super(data, chartX, chartY, chartWidth, chartHeight);
     this.name = "Pie";
-    
   }
+  
   float calculateXLabelWidth() {
     return 80.0; 
   }

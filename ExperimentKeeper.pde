@@ -60,10 +60,12 @@ public class ExperimentKeeper{
     for(int i = 0; i < dataset.length; i++) {
       
       float chartChoice = random(0, 1);
-      if (chartChoice < 0.5) {
+      if (chartChoice < 0.333) {
         charts[i] = new BarChart(dataset[i], chartX, chartY, chartWidth, chartHeight);
-      } else {
+      } else if (chartChoice < 0.666 && chartChoice >= 0.333){
         charts[i] = new RadarChart(dataset[i], chartX, chartY, chartWidth, chartHeight);
+      } else {
+        charts[i] = new PieChart(dataset[i], chartX, chartY, chartWidth, chartHeight);
       }
     }
 
