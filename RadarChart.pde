@@ -39,28 +39,28 @@ public class RadarChart extends Chart {
       float val = 0;
       
       float pix_to_value = diameter/2/10;
-      
-      println("val_inc: ", val_inc, "num circles: ", num_circle);
+
       
       //four concentric circles wiht a distance of buffer in between
-      beginShape();
-      for(int i = 0; i <= num_circle; i++){
-        stroke(0);
-        ellipse(cent_x, cent_y, diameter, diameter);
+      //beginShape();
+      //for(int i = 0; i <= num_circle; i++){
+      //  stroke(0);
+      //  ellipse(cent_x, cent_y, diameter, diameter);
         
-        //draw the increments on radar chart
-        fill(0);
-        textSize(8);
-        String val_to_print = nf(val, 1, 1);
-        text(val_to_print, cent_x, cent_y - val*pix_to_value+5);
-        println("val: ", val);
-        noFill();
+      //  //draw the increments on radar chart
+      //  fill(0);
+      //  //textSize(8);
+      //  //String val_to_print = nf(val, 1, 1);
+      //  //text(val_to_print, cent_x, cent_y - val*pix_to_value+5);
+      //  noFill();
         
-        val += val_inc;
+      //  val += val_inc;
         
-        diameter -= buffer;
-      }
-      endShape();
+      //  diameter -= buffer;
+      //}
+      //endShape();
+      
+      ellipse(cent_x, cent_y, diameter, diameter);
       
       float degree_inc = (2 * PI)/data.size(); 
       //the end point on circle circumference
@@ -102,6 +102,15 @@ public class RadarChart extends Chart {
          //records each as vertex for filling
          vertex(data_x_pts.get(i), data_y_pts.get(i));
       }
-      endShape(CLOSE);
+      endShape();
+      
+      // dots
+      noStroke();
+      fill(255, 255, 0);
+      for(int i = 0; i < data.size() ; i++){
+        if (data.getPoint(i).isMarked()) {
+            ellipse(data_x_pts.get(i), data_y_pts.get(i), 7, 7);
+        }
+      }  
   }
 }

@@ -27,12 +27,13 @@ public class BarChart extends Chart {
       float startX = this.viewX + (((2 * index) + 1) * xScale);
       float startY =  this.viewY + this.viewHeight - yHeight;
       
-      fill(255, 45, 45);
+      fill(0);
       rect(startX, startY, xScale, yHeight);
       
+      // dots
       if (data.getPoint(index).isMarked()) {
-        fill(237, 255, 76);
-        ellipse(startX + (xScale/2), startY + (yHeight/2), 6, 6);
+        fill(255, 255, 0);
+        ellipse(startX + (xScale/2), startY + 10, 6, 6);
       }
     }
   }
