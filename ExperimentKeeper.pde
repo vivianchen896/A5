@@ -65,7 +65,7 @@ public class ExperimentKeeper{
       } else if (chartChoice < 0.666 && chartChoice >= 0.333){
         charts[i] = new RadarChart(dataset[i], chartX, chartY, chartWidth, chartHeight);
       } else {
-        charts[i] = new PieChart(dataset[i], chartX, chartY, chartWidth, chartHeight);
+        charts[i] = new AlluvialChart(dataset[i], chartX, chartY, chartWidth, chartHeight);
       }
     }
 
