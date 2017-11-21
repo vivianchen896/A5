@@ -1,0 +1,11 @@
+PartipantID,TrialIndex,ChartName,TruePercentage,ReportedPercentage,Error
+p1,0,Alluvial,0.28255734,0.2,-2.268418
+p1,1,Alluvial,0.25943172,0.15,-2.0927603
+p1,2,Alluvial,0.410807,0.3,-2.0843215
+p1,3,Alluvial,0.63809264,0.3,-1.1106273
+p1,4,Bar,0.6201034,0.65,-2.690623
+p1,5,Alluvial,0.38875484,0.3,-2.225971
+p1,6,Bar,0.7784803,0.85,-2.347254
+p1,7,Alluvial,0.75050575,0.6,-1.8598459
+p1,8,Alluvial,0.4479847,0.5,-2.498054
+p1,9,Radar,0.27338773,0.25,-2.7525563
